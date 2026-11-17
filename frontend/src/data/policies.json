@@ -1,0 +1,45 @@
+{
+  "cancellationPolicy": {
+    "title": "Cancellation and Rescheduling Policy",
+    "titleBn": "বাতিল ও সময় পরিবর্তন নীতিমালা",
+    "rules": [
+      {
+        "text": "Free cancellation or rescheduling up to 12 hours before your booked visit time.",
+        "textBn": "ভিজিটের নির্ধারিত সময়ের ১২ ঘণ্টা আগ পর্যন্ত বিনামূল্যে পরিবর্তন বা বাতিল করা যাবে।"
+      },
+      {
+        "text": "If paid online, full refunds are processed back to your original bKash/Nagad/Card within 2-3 business days.",
+        "textBn": "অনলাইনে পেমেন্ট করা থাকলে ২-৩ কার্যদিবসের মধ্যে আপনার বিকাশ/নগদ/কার্ডে সম্পূর্ণ রিফান্ড পাঠানো হবে।"
+      },
+      {
+        "text": "If an emergency arises within 12 hours, please message support and we will happily assist without penalty.",
+        "textBn": "জরুরি কোনো কারণে শেষ মুহূর্তে যেতে না পারলে সাপোর্টে বার্তা পাঠান, আমরা কোনো বাড়তি চার্জ ছাড়াই সাহায্য করব।"
+      }
+    ]
+  },
+  "privacyPromise": {
+    "title": "Our Trust and Privacy Promise",
+    "titleBn": "আমাদের গোপনীয়তা ও সুরক্ষার অঙ্গীকার",
+    "points": [
+      {
+        "title": "Zero Ad Trackers",
+        "titleBn": "কোনো বিজ্ঞাপন বা ট্র্যাকার নেই",
+        "description": "We never sell your data or run behavioral marketing cookies.",
+        "descriptionBn": "আমরা কখনো আপনার তথ্য বিক্রি করি না বা মার্কেটিং ট্র্যাকার ব্যবহার করি না।"
+      },
+      {
+        "title": "You Control What Doctors See",
+        "titleBn": "ডাক্তাররা কি দেখবেন তা আপনি নিয়ন্ত্রণ করেন",
+        "description": "Every medical report and progress metric can be hidden or shared with one toggle.",
+        "descriptionBn": "প্রতিটি মেডিকেল রিপোর্ট ও অগ্রগতির তথ্য আপনার ইচ্ছানুযায়ী শেয়ার বা গোপন করা যায়।"
+      },
+      {
+        "title": "Instant Data Deletion",
+        "titleBn": "সহজ ডেটা মুছে ফেলা",
+        "description": "You can export all your notes or permanently delete your account at any time.",
+        "descriptionBn": "যেকোনো সময় আপনার সমস্ত তথ্য ডাউনলোড অথবা স্থায়ীভাবে মুছে ফেলতে পারেন।"
+      }
+    ]
+  },
+  "medicalDisclaimer": "Pathway supports your recovery. It does not replace doctors or emergency services. If you are experiencing acute withdrawal, severe medical distress, or thoughts of self-harm, please tap 'Get Help Now' or call national helplines immediately."
+}

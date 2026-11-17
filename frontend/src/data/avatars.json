@@ -1,0 +1,10 @@
+[
+  { "id": "avatar-sprout", "name": "Green Sprout", "nameBn": "সবুজ চারা", "color": "bg-blue-100 text-blue-700 border-blue-300", "emoji": "🌱" },
+  { "id": "avatar-sun", "name": "Warm Sun", "nameBn": "উষ্ণ সূর্য", "color": "bg-amber-100 text-amber-700 border-amber-300", "emoji": "☀️" },
+  { "id": "avatar-river", "name": "Calm River", "nameBn": "শান্ত নদী", "color": "bg-blue-100 text-blue-700 border-blue-300", "emoji": "🌊" },
+  { "id": "avatar-mountain", "name": "Gentle Mountain", "nameBn": "ধীর পর্বত", "color": "bg-slate-100 text-slate-700 border-slate-300", "emoji": "⛰️" },
+  { "id": "avatar-lotus", "name": "Lotus Flower", "nameBn": "পদ্মফুল", "color": "bg-rose-100 text-rose-700 border-rose-300", "emoji": "🪷" },
+  { "id": "avatar-tea", "name": "Warm Tea", "nameBn": "গরম চা", "color": "bg-orange-100 text-orange-700 border-orange-300", "emoji": "🍵" },
+  { "id": "avatar-star", "name": "Quiet Star", "nameBn": "শান্ত তারা", "color": "bg-indigo-100 text-indigo-700 border-indigo-300", "emoji": "✨" },
+  { "id": "avatar-leaf", "name": "Autumn Leaf", "nameBn": "শান্ত পাতা", "color": "bg-lime-100 text-lime-700 border-lime-300", "emoji": "🍃" }
+]

@@ -1,0 +1,24 @@
+{
+  "slots": [
+    { "doctorId": "dr-tanvir-ahmed", "date": "2026-11-12", "time": "04:30 PM", "mode": "online", "isBooked": false },
+    { "doctorId": "dr-tanvir-ahmed", "date": "2026-11-12", "time": "05:30 PM", "mode": "online", "isBooked": false },
+    { "doctorId": "dr-tanvir-ahmed", "date": "2026-11-12", "time": "06:30 PM", "mode": "in_person", "isBooked": true },
+    { "doctorId": "dr-tanvir-ahmed", "date": "2026-11-13", "time": "04:00 PM", "mode": "online", "isBooked": false },
+    { "doctorId": "dr-tanvir-ahmed", "date": "2026-11-13", "time": "05:00 PM", "mode": "in_person", "isBooked": false },
+    { "doctorId": "dr-nusrat-jahan", "date": "2026-11-11", "time": "07:00 PM", "mode": "online", "isBooked": false },
+    { "doctorId": "dr-nusrat-jahan", "date": "2026-11-11", "time": "08:00 PM", "mode": "online", "isBooked": true },
+    { "doctorId": "dr-nusrat-jahan", "date": "2026-11-12", "time": "06:00 PM", "mode": "in_person", "isBooked": false },
+    { "doctorId": "dr-nusrat-jahan", "date": "2026-11-12", "time": "07:00 PM", "mode": "online", "isBooked": false },
+    { "doctorId": "dr-kamrul-hasan", "date": "2026-11-11", "time": "05:30 PM", "mode": "online", "isBooked": false },
+    { "doctorId": "dr-kamrul-hasan", "date": "2026-11-12", "time": "05:00 PM", "mode": "in_person", "isBooked": false },
+    { "doctorId": "dr-farzana-yasmin", "date": "2026-11-12", "time": "06:00 PM", "mode": "online", "isBooked": false },
+    { "doctorId": "dr-farzana-yasmin", "date": "2026-11-13", "time": "07:00 PM", "mode": "online", "isBooked": false },
+    { "doctorId": "dr-mahmudur-rahman", "date": "2026-11-12", "time": "03:00 PM", "mode": "in_person", "isBooked": false },
+    { "doctorId": "dr-mahmudur-rahman", "date": "2026-11-13", "time": "04:00 PM", "mode": "online", "isBooked": false },
+    { "doctorId": "dr-sharmin-akter", "date": "2026-11-12", "time": "02:00 PM", "mode": "online", "isBooked": false },
+    { "doctorId": "dr-rafiqul-islam", "date": "2026-11-13", "time": "05:00 PM", "mode": "in_person", "isBooked": false },
+    { "doctorId": "dr-sabina-yeasmin", "date": "2026-11-14", "time": "11:00 AM", "mode": "online", "isBooked": false },
+    { "doctorId": "dr-ashraful-alam", "date": "2026-11-11", "time": "04:00 PM", "mode": "online", "isBooked": false },
+    { "doctorId": "dr-tasnim-ara", "date": "2026-11-12", "time": "08:00 PM", "mode": "online", "isBooked": false }
+  ]
+}

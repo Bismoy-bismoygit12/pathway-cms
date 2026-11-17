@@ -1,0 +1,16 @@
+{
+  "name": "pathway-healthcare",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm --prefix frontend run build && node backend/src/server.js",
+    "build": "npm --prefix frontend run build",
+    "start": "node backend/src/server.js",
+    "lint": "npm --prefix frontend run lint"
+  }
+}

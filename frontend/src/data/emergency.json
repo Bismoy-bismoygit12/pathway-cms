@@ -1,0 +1,168 @@
+{
+  "hotlines": [
+    {
+      "id": "national-999",
+      "name": "National Emergency Service (Bangladesh)",
+      "nameBn": "জাতীয় জরুরি সেবা",
+      "number": "999",
+      "hours": "24/7 Free Call",
+      "hoursBn": "২৪/৭ টোল ফ্রি",
+      "description": "Police, Ambulance, and Fire Service immediate dispatch.",
+      "descriptionBn": "পুলিশ, অ্যাম্বুলেন্স ও ফায়ার সার্ভিস তাৎক্ষণিক সহায়তা।",
+      "type": "emergency",
+      "isPrimary": true
+    },
+    {
+      "id": "kaan-pete-roi",
+      "name": "Kaan Pete Roi (Emotional Support & Crisis)",
+      "nameBn": "কান পেতে রই (মানসিক স্বাস্থ্য ও ক্রাইসিস হেল্পলাইন)",
+      "number": "+8801779554391",
+      "hours": "3:00 PM – 3:00 AM Daily",
+      "hoursBn": "প্রতিদিন দুপুর ৩:০০ – রাত ৩:০০",
+      "description": "First emotional support helpline in Bangladesh. Confidential, caring and free of judgment.",
+      "descriptionBn": "বাংলাদেশের প্রথম মানসিক সহায়তা হেল্পলাইন। সম্পূর্ণ গোপনীয় ও বিচারহীন সহমর্মিতা।",
+      "type": "crisis",
+      "isPrimary": true
+    },
+    {
+      "id": "nimh-hotline",
+      "name": "National Institute of Mental Health (NIMH)",
+      "nameBn": "জাতীয় মানসিক স্বাস্থ্য ইনস্টিটিউট ও হাসপাতাল",
+      "number": "029118171",
+      "hours": "24 Hours Emergency",
+      "hoursBn": "২৪ ঘণ্টা জরুরি বিভাগ",
+      "description": "Government premier psychiatric hospital with round-the-clock emergency care.",
+      "descriptionBn": "সরকারি প্রধান মানসিক ও আসক্তি নিরাময় জরুরি কেন্দ্র।",
+      "type": "hospital",
+      "isPrimary": false
+    },
+    {
+      "id": "citizen-333",
+      "name": "Government Citizen Help Desk",
+      "nameBn": "জাতীয় তথ্য ও সেবা বাতায়ন",
+      "number": "333",
+      "hours": "24/7",
+      "hoursBn": "২৪/৭ সব সময়",
+      "description": "Call for emergency doctor consultation and social safety directions.",
+      "descriptionBn": "জরুরি সরকারি স্বাস্থ্য ও আইনি সেবার তথ্য ও দিকনির্দেশনা।",
+      "type": "support",
+      "isPrimary": false
+    },
+    {
+      "id": "women-safety-109",
+      "name": "National Helpline for Women and Children",
+      "nameBn": "নারী ও শিশু নির্যাতন প্রতিরোধ হেল্পলাইন",
+      "number": "109",
+      "hours": "24/7 Free Call",
+      "hoursBn": "২৪/৭ টোল ফ্রি",
+      "description": "Immediate protection, emotional support and shelter coordination.",
+      "descriptionBn": "নিরাপত্তা ও জরুরি মনস্তাত্ত্বিক সহায়তা প্রদান।",
+      "type": "crisis",
+      "isPrimary": false
+    }
+  ],
+  "medicalDangerWarning": {
+    "title": "Medical Warning: Alcohol & Sedative / Sleeping Pill Dependency",
+    "titleBn": "জরুরি স্বাস্থ্য সতর্কতা: অ্যালকোহল ও ঘুমের ওষুধ নির্ভরতা",
+    "message": "Stopping alcohol or tranquilizers (such as sleeping pills, clonazepam, alprazolam) suddenly on your own can cause seizures, dangerous blood pressure spikes, and serious medical risks. Please do NOT stop abruptly without doctor supervision. Talk to a physician right away.",
+    "messageBn": "অ্যালকোহল অথবা ঘুমের ও উদ্বেগের ওষুধ (যেমন ক্লোনাজিপাম, অ্যালপ্রাজোলাম) হঠাৎ নিজে নিজে বন্ধ করা বিপজ্জনক হতে পারে; এতে খিঁচুনি ও রক্তচাপের মারাত্মক ঝুঁকি তৈরি হয়। দয়া করে কোনো চিকিৎসকের তত্ত্বাবধান ছাড়া হঠাৎ বন্ধ করবেন না। অবিলম্বে চিকিৎসকের পরামর্শ নিন।"
+  },
+  "riskLevels": {
+    "low": {
+      "level": "Low Concern",
+      "levelBn": "স্বাভাবিক মানসিক চাপ",
+      "title": "You are doing okay, take a slow breath",
+      "titleBn": "আপনি নিরাপদে আছেন, একটি গভীর শ্বাস নিন",
+      "description": "Cravings or feelings of sadness are natural waves. They rise, reach a peak, and then pass.",
+      "descriptionBn": "আকস্মিক অস্থিরতা বা মন খারাপ একটি সাধারণ অনুভূতি। এটি ধীরে ধীরে এসে আবার মিলিয়ে যায়।"
+    },
+    "elevated": {
+      "level": "Elevated Need",
+      "levelBn": "বাড়তি মানসিক অস্থিরতা",
+      "title": "We recommend talking to someone today",
+      "titleBn": "আজই কারো সাথে কথা বলার পরামর্শ দিচ্ছি",
+      "description": "You do not have to carry heavy thoughts alone. Reach out to a doctor or someone you trust right now.",
+      "descriptionBn": "ভারী মানসিক চাপ একা বহন করার প্রয়োজন নেই। এখনই কোনো ডাক্তার বা আপনার বিশ্বস্ত প্রিয়জনের সাথে কথা বলুন।"
+    },
+    "imminent": {
+      "level": "Immediate Safety Risk",
+      "levelBn": "জরুরি তাৎক্ষণিক সুরক্ষা প্রয়োজন",
+      "title": "Your life matters deeply. Please get in touch now.",
+      "titleBn": "আপনার জীবন অত্যন্ত মূল্যবান। দয়া করে এখনই যোগাযোগ করুন।",
+      "description": "Please stop what you are doing. Connect immediately with our emergency hotlines or call a trusted loved one.",
+      "descriptionBn": "দয়া করে এখনই হটলাইনে কল করুন বা নিকটস্থ জরুরি হাসপাতালে যোগাযোগ করুন।"
+    }
+  },
+  "centers": [
+    {
+      "id": "c1",
+      "name": "Central Drug Addiction Treatment Hospital",
+      "nameBn": "কেন্দ্রীয় মাদকাসক্তি নিরাময় হাসপাতাল",
+      "city": "Dhaka",
+      "cityBn": "ঢাকা",
+      "area": "Tejgaon Industrial Area",
+      "areaBn": "তেজগাঁও শিল্প এলাকা",
+      "phone": "+88028870125",
+      "address": "44/Ka, Tejgaon Industrial Area, Dhaka 1208",
+      "addressBn": "৪৪/ক, তেজগাঁও শিল্প এলাকা, ঢাকা ১২০৮",
+      "type": "Government Specialized Rehab Center",
+      "typeBn": "সরকারি বিশেষায়িত নিরাময় কেন্দ্র"
+    },
+    {
+      "id": "c2",
+      "name": "National Institute of Mental Health & Hospital (NIMH)",
+      "nameBn": "জাতীয় মানসিক স্বাস্থ্য ইনস্টিটিউট ও হাসপাতাল",
+      "city": "Dhaka",
+      "cityBn": "ঢাকা",
+      "area": "Sher-e-Bangla Nagar",
+      "areaBn": "শেরেবাংলা নগর",
+      "phone": "+88029118171",
+      "address": "Sher-e-Bangla Nagar, Dhaka 1207",
+      "addressBn": "শেরেবাংলা নগর, ঢাকা ১২০৭",
+      "type": "National Specialized Tertiary Hospital",
+      "typeBn": "জাতীয় বিশেষায়িত হাসপাতাল"
+    },
+    {
+      "id": "c3",
+      "name": "Ahsania Mission Drug Rehabilitation Centre",
+      "nameBn": "আহছানিয়া মিশন মাদকাসক্তি চিকিৎসা ও পুনর্বাসন কেন্দ্র",
+      "city": "Gazipur",
+      "cityBn": "গাজীপুর",
+      "area": "Mullapara, Gazipur",
+      "areaBn": "মোল্লাপাড়া, গাজীপুর",
+      "phone": "+8801713436034",
+      "address": "Mullapara, Joydebpur, Gazipur",
+      "addressBn": "মোল্লাপাড়া, জয়দেবপুর, গাজীপুর",
+      "type": "Non-profit Accredited Recovery Center",
+      "typeBn": "স্বীকৃত অলাভজনক পুনর্বাসন কেন্দ্র"
+    },
+    {
+      "id": "c4",
+      "name": "Life Spring Mental Health Consultation Center",
+      "nameBn": "লাইফ স্প্রিং মেন্টাল হেলথ সেন্টার",
+      "city": "Dhaka",
+      "cityBn": "ঢাকা",
+      "area": "Panthapath",
+      "areaBn": "পান্থপথ",
+      "phone": "+8801763438148",
+      "address": "House 55/2, Bir Uttam KM Shafiullah Sarak, Dhaka",
+      "addressBn": "বাড়ি ৫৫/২, বীর উত্তম কে এম শফিউল্লাহ সড়ক, ঢাকা",
+      "type": "Private Psychiatric & Therapy Clinic",
+      "typeBn": "ব্যক্তিগত সাইকিয়াট্রিক ও থেরাপি ক্লিনিক"
+    },
+    {
+      "id": "c5",
+      "name": "Chittagong Medical College Psychiatry Dept.",
+      "nameBn": "চট্টগ্রাম মেডিকেল কলেজ মনোরোগ বিভাগ",
+      "city": "Chattogram",
+      "cityBn": "চট্টগ্রাম",
+      "area": "Panchlaish",
+      "areaBn": "পাঁচলাইশ",
+      "phone": "+88031616871",
+      "address": "KB Fazlul Kader Road, Panchlaish, Chattogram",
+      "addressBn": "কেবি ফজলুল কাদের রোড, চট্টগ্রাম",
+      "type": "Government Medical College Hospital",
+      "typeBn": "সরকারি মেডিকেল কলেজ হাসপাতাল"
+    }
+  ]
+}

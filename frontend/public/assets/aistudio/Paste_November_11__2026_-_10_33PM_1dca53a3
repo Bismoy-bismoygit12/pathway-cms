@@ -1,0 +1,226 @@
+ROLE
+You are a senior product designer and senior front-end engineer. Build a complete, working, front-end prototype of a recovery-support website called "Pathway" (use this neutral name everywhere). The website helps people recover from drug and substance addiction. It must look professional, feel calm and safe, and be very easy to use.
+
+SCOPE (VERY IMPORTANT)
+- Build ONLY the public website and the logged-in USER portal.
+- Do NOT build an Admin dashboard. Do NOT build a Psychiatrist dashboard or login. These will be made later.
+- The user management system (create account, sign in, profile, security, account control) lives fully inside the user side.
+- The psychiatrist booking system also lives fully inside the user portal.
+- Anything the admin or doctors would normally provide (doctor profiles, slots, fees, rewards, articles, emergency numbers) must come from clean mock JSON files in /data, so a real API can replace them later.
+- Doctor-side actions (for example confirming a booking or suggesting a goal) are simulated through the hidden Demo Controls drawer, not through a doctor screen.
+
+TECH
+- React + TypeScript + Tailwind CSS. React Router for pages. Lucide icons. Recharts for charts.
+- Front end only. No real backend. Use realistic mock data in /data and keep user state in localStorage so the prototype feels real after refresh. Support more than one mock account on the same browser (so sign up, log out, and sign in again all work).
+- Everything must be clickable and working: forms, buttons, timers, bookings, uploads, payments, chat, notifications, settings.
+- Fully responsive (phone first, then tablet and desktop). Large touch-friendly buttons.
+
+WRITING STYLE (VERY IMPORTANT)
+- Use simple, short, easy English. Short sentences. Everyday words. No medical or technical jargon. If a hard word is needed, explain it right next to it.
+- Be warm, kind and never judging. Never shame the user. Say "Setbacks happen. You can start again today," not "You failed."
+- Button labels must be clear actions: "Start", "Book a visit", "Get help now".
+- Use no addiction words in page titles, browser tab titles, notification text, or email/SMS previews. Use neutral titles like "Pathway" or "My Day".
+
+LANGUAGES
+- Build a full English and Bangla (বাংলা) switcher in the header. Put all text in a translation file (en.json, bn.json). Every page, button, message and mock notification must work in both languages. Remember the choice. Use a Bangla-friendly font (Noto Sans Bengali) and a clean English font (Inter). Use local date and number formats (Bangla digits when Bangla is on). Structure it so more languages can be added later.
+
+DESIGN SYSTEM
+- Mood: calm, hopeful, trustworthy, modern. Soft teal and sage green as the main colors, warm sand and white backgrounds, a gentle coral only for important alerts. Avoid red-heavy or scary visuals.
+- Rounded cards, soft shadows, plenty of white space, big readable text (minimum 16px body), clear headings, friendly line icons and simple illustrations.
+- Light mode and an optional soft dark mode. Smooth, gentle animations (respect "reduce motion").
+- Accessibility: WCAG 2.1 AA contrast, full keyboard navigation, visible focus rings, ARIA labels, screen-reader friendly, alt text, skip-to-content link.
+- Friendly empty states, loading skeletons, and kind error messages on every page.
+
+GLOBAL ELEMENTS (on every page)
+1. A "Get Help Now" button always visible in the header. It opens the Emergency Help page or a slide-in panel. It works without login and without payment.
+2. A "Quick Exit" button always visible. On click it instantly goes to a neutral page (for example a weather page, simulated), clears visible session state, and replaces the history entry. Also support pressing the Escape key three times.
+3. Language switcher (English / বাংলা).
+4. Neutral browser tab title and a neutral favicon.
+5. Cookie consent banner (simple, with "Only necessary" and "Accept all" choices). No ad trackers.
+6. A small footer with Privacy, Terms, Cookie Policy, Contact, and the disclaimer: "Pathway supports your recovery. It does not replace doctors or emergency services."
+7. Offline banner when the connection drops, and an emergency page that still works offline (simulate with a static page).
+8. When logged in, the header shows a small account menu (avatar or initials, nickname, "My profile", "Settings", "Log out").
+
+PUBLIC PAGES (no login)
+- Home: warm hero ("Small steps. Every day. You are not alone."), how it works in 4 simple steps, feature highlights, trust and privacy promise, "Get Help Now", "Create my account" button.
+- About, How It Works, FAQ (accordion), Contact (working form with success message), Pricing (monthly plan BDT 50, optional 3-month and 12-month plans, Free vs Premium comparison table), Privacy Policy, Terms, Cookie Policy.
+- Educational Library (public preview): a few articles with search, categories and tags.
+- Psychiatrist Directory (preview): a few doctor cards with a "Log in to book" button.
+- Emergency Help page (see below).
+- Sign up and Log in pages (see User Management below).
+
+USER MANAGEMENT SYSTEM (FR-01, FR-07, NFR-01, NFR-02) — a complete system
+
+A. Create an account (sign-up wizard with a progress bar and a Back button)
+- Step 1: Choose how to sign up: email or phone number. Show simple rules and live checks (valid email, valid Bangladeshi phone format like 01XXXXXXXXX or +8801XXXXXXXXX).
+- Step 2: Create a password. Show a strength meter and simple rules ("At least 8 characters. Mix letters and numbers."). Show/hide password button. Confirm password field.
+- Step 3: Verify with a 6-digit code (OTP). Mock rule: accept any 6 digits. Show a countdown, a "Resend code" button with a short wait, and a kind message if the code is wrong or expired. Limit tries and show a friendly lock message after too many wrong tries.
+- Step 4: A few basics: nickname (optional, can stay private), age check ("I am 18 or older" must be ticked; if not, show a kind message and point to Get Help Now and a safe info page), and language.
+- Step 5: Consent screen with separate switches: Terms and Privacy (required), AI help, Chatbot memory, Sharing with doctors (all optional, off by default, each explained in one simple sentence). Show the disclaimer: "Pathway supports your recovery. It does not replace doctors or emergency services."
+- Step 6: Short, skippable onboarding: what they want help with, goals, triggers, preferred activities. Show a "Skip for now" button. Everything can be changed later in the profile.
+- Step 7: Welcome screen with a friendly message, a first goal suggestion, and a button to go to My Day.
+- Catch duplicate accounts (same email or phone) with a kind message and a link to log in.
+- A "Stay private" option: the user can sign up with only a nickname and email or phone. No real name is needed anywhere.
+
+B. Log in
+- Log in with email or phone plus password, then OTP if two-step login is on.
+- "Remember me" (off by default).
+- "I am on a public or shared computer" checkbox: shows a short-session notice, turns off remember-me and autofill, and uses a shorter auto-logout.
+- Wrong password message in kind words. After 5 wrong tries, show a short lock with a countdown and a "Reset my password" link.
+- "Log in with a code instead" option (OTP only).
+- Session timeout warning popup before auto logout, with "Stay logged in".
+
+C. Forgot and reset password
+- Enter email or phone, get a mock code, set a new password, show success, and send a mock "Your password was changed" notification.
+
+D. USER PROFILE PAGE ("My Profile") — route /me
+Design it as a clean page with a header card and tabbed or sectioned content. Every section has its own "Edit" and "Save" with a success toast, and unsaved-change warnings.
+  1. Header card: avatar (choose from friendly illustrated avatars or upload a picture; a real photo is never required), nickname, member since, current plan badge (Free or Premium), current streak and points, and a "Profile completeness" ring with simple tips ("Add a trusted contact to reach 90%").
+  2. About me: nickname, optional full name, date of birth (age is calculated, 18+ rule enforced), gender (optional, with "Prefer not to say"), city or area (optional), preferred language, time zone (default Bangladesh).
+  3. Contact details: email and phone, each shown with a "Verified" or "Not verified" badge. Changing email or phone needs a mock OTP to the new one. Allow adding a second contact method. Show which one is used for reminders.
+  4. My recovery preferences: what I want help with, my goals, my triggers, favourite activity types, and best time of day for goals. These feed the "Suggested for me" goals and library picks. Show a short note: "Only you can see this unless you choose to share it."
+  5. Health basics (all optional): short notes the user wants doctors to know, such as allergies, current medicines (plain text list), and past care. Label: "Optional. This is not medical advice and is never shared unless you say so."
+  6. Trusted contact: add one or two trusted people (name, relationship, phone). Explain in simple words that Pathway will only message them if the user turns this on, and it is never automatic. Link this to the Relapse page and the Crisis Flow ("Message my trusted person" button).
+  7. Privacy and sharing: shows all consent switches (AI help, chatbot memory, sharing with doctors), a list of each doctor and what they can see with a "Change" button, who viewed what (a simple, readable access history), and "Hide my nickname in community".
+  8. Security: change password (with current password check), two-step login on or off, a list of "Where I am logged in" (device, browser, city, last active) with "Log out this device" and "Log out of all devices", a recent sign-in history, and a "Set a quick-lock PIN" option for opening the app (mock).
+  9. Notifications shortcut: a summary and a link to Notification Settings.
+  10. My data and account control:
+      - Export my data (downloads a JSON file and a simple printable summary).
+      - Pause my account ("Take a break": hides me from reminders and community, keeps my progress, can be undone any time).
+      - Delete my account and data: a clear, kind, multi-step confirm (explain what is deleted, ask for password or OTP, ask for a reason (optional), a short waiting period of 7 days with a "Cancel deletion" option, then a final done screen). Also allow deleting parts: chats, journals, reports, doctor notes.
+  11. Appearance and accessibility: language, light or dark mode, text size, reduce motion, low-data mode.
+- Profile must show friendly empty states and never ask for more than needed. Mark every field as Required or Optional.
+
+E. Account statuses and states to support in the UI
+- New (not verified), Active, Paused, Locked (too many wrong tries), Pending deletion, Deleted. Each state shows a clear and kind screen and what the user can do next.
+
+F. Mock identity service (in /services/auth.ts and /services/user.ts)
+- Functions such as register(), verifyOtp(), login(), logout(), logoutAll(), resetPassword(), changePassword(), updateProfile(), updateContact(), addTrustedContact(), getSessions(), revokeSession(), exportData(), pauseAccount(), requestDeletion(), cancelDeletion().
+- Store users in localStorage with a safe mock hash (never store a plain password). Add comments showing where a real API will connect. Keep a clean User type with fields for id, nickname, name, email, phone, dob, gender, city, language, timezone, avatar, status, plan, consents, preferences, healthBasics, trustedContacts, sessions, createdAt.
+- Route protection: logged-out users are sent to the log in page, and then back to where they wanted to go. Logged-in users do not see the sign-up page.
+
+USER PORTAL (after login) with a left sidebar on desktop and a bottom navigation bar on phone:
+
+1. Dashboard ("My Day"): greeting using the nickname, today's goals with progress ring, current streak, points, a badge preview, a mood check-in shortcut, a "Next visit" card (shows the next doctor appointment with a Join or Details button), a "Finish your profile" card when the profile is incomplete, daily motivation message, quick links to Chat and Library, and a gentle "Having a hard time?" card linking to relapse and crisis help.
+
+2. Daily Goals (FR-03): list of 2 to 10 minute activities (breathing, meditation, short walk, journaling, reading or watching, water and sleep check-in). Tabs for "Suggested for me", "My choices", and "From my doctor". The "From my doctor" tab shows goals a doctor suggested after a visit, with the doctor's name. Include a working Goal Player with a timer, step-by-step prompts, pause, and a "Done" confirmation. Add a minimum time rule so a goal cannot be completed too fast (show a kind message). Award points, update streaks, and unlock badges with a small celebration animation. Missing a day never removes progress, and the message must be encouraging.
+
+3. Rewards: points balance, rewards catalog (digital badges, premium chat days, discount coupons, partner vouchers), working redeem button with confirmation, and redemption history.
+
+4. Progress and Reports (FR-07): charts for goals, streaks, mood and cravings over time. Weekly and monthly report views. A "Download PDF" and "Print" button (print-friendly styling). Optional sobriety counter and milestones with gentle wording. Optional mood, craving and trigger check-in form.
+
+5. AI Chat (FR-04): a full-page chat and a floating chat widget. It must say clearly "I am an AI helper, not a doctor" with a short list of what it can and cannot do. Support English, Bangla and mixed messages. Use friendly, rule-based mock replies with a typing/streaming effect (optional: connect to the Gemini API through an environment key, with the mock replies as a fallback). Include: quick-start chips ("I feel a craving", "I feel stressed", "I had a setback"), coping tools (urge surfing, grounding, trigger plan), saved drafts, a "Retry" on dropped connection, a "Report this answer" button, and a "Talk to a real person" shortcut that opens the Find a Psychiatrist page and the emergency help. Include a Memory panel where the user can view, edit and delete memory and chat history (only works if memory consent is on). Free users have a small daily message limit with a friendly upgrade message. Safety replies are never blocked by the limit. The bot must never diagnose, prescribe, give doses or drug mixes, or help get or use illegal drugs. If asked, it kindly says it cannot help with that and offers safe options. Add crisis keyword detection (English and Bangla) that triggers the Crisis Flow below in real time.
+
+6. Educational Library (full) (FR-02): articles, videos, and audio (use placeholders) on addiction, mental health, nutrition, sleep and recovery. Search, categories, tags, bookmarks, "Continue where you left off", and personalized picks based on the profile preferences. Low-data mode toggle (text-first, no auto-loading media, audio-only option). Built-in relaxation tools: guided breathing animation, 5-4-3-2-1 grounding, and muscle relaxation with step prompts.
+
+7. FIND A PSYCHIATRIST AND BOOKING SYSTEM (FR-05) — a complete system embedded in the user portal.
+
+   A. Directory
+   - At least 10 mock psychiatrists (Bangladeshi names, photo placeholders, qualifications such as MBBS and FCPS Psychiatry, years of experience, languages, specialties such as drug and alcohol recovery, anxiety, depression, sleep, and family support, fee in BDT, hospital or clinic name, city).
+   - Each card shows photo, name, specialty, languages, experience, fee, consultation modes, "Next free slot", and buttons "View profile" and "Book a visit".
+   - Filters: specialty, language, day or date, consultation mode (online, in person), fee range, and gender preference. Search by name. Sort by earliest slot, lowest fee, and most experience. Show a friendly empty state when nothing matches.
+   - A small "Not sure who to pick? Help me choose" helper with 3 simple questions that suggests 3 doctors (use the profile language and preferences when available).
+
+   B. Doctor profile page
+   - About the doctor in simple words, qualifications, experience, languages, what they can help with, fee, modes, clinic address with a map placeholder, and a "What to expect in your first visit" box.
+   - Weekly slot calendar: user picks a date, then a time. Show booked slots as greyed out. Show times in Bangladesh time.
+   - Clear note: "Booking is not for emergencies. If you need help right now, tap Get Help Now."
+
+   C. Booking flow (a simple step-by-step wizard, with a progress bar and a Back button)
+   - Step 1: Pick a date and time.
+   - Step 2: Choose Online (video or audio only) or In person (if the doctor offers it).
+   - Step 3: "Tell the doctor why you are coming" (short optional text box and quick tick options such as cravings, stress, sleep problems, a setback, first time). Reassure: "You can skip this."
+   - Step 4: "What would you like to share?" with separate switches for: my basic profile, my goals and progress, my mood check-ins, my health basics, and chosen medical reports (pick from my reports). Everything is off by default. These switches connect to the Privacy and sharing section of the profile. Explain in simple words that the user can change this later.
+   - Step 5: Review and cancel policy. Show the policy in simple words (for example, free cancel up to 12 hours before) and ask the user to tick that they understand.
+   - Step 6: Payment. Use a config flag PAY_ONLINE_FOR_CONSULTATION. If true, show the fee and go to the simulated secure payment page (bKash, Nagad, Card). If false, show "Pay the doctor at the visit". Never show card fields inside the main app.
+   - Step 7: Confirmation screen with the booking number, date, time, doctor, mode, and buttons "Add to calendar" (real .ics file), "Go to My Appointments", and "Back to Dashboard". Send a mock in-app, email and SMS confirmation with discreet wording (for example "Your visit is booked for Sunday 5:00 PM").
+   - Booking statuses: Requested, Confirmed, Rescheduled, Cancelled, Completed, Missed. A new booking starts as "Requested" and moves to "Confirmed" when Demo Controls simulate the doctor's reply (also allow an auto-confirm setting).
+   - Prevent double booking of the same slot and prevent two overlapping visits for the same user.
+   - If the user's profile is missing something needed for a visit (for example a verified phone number for reminders), show a friendly prompt to add it, without blocking emergency help.
+
+   D. My Appointments page
+   - Tabs: Upcoming, Past, Cancelled. Each appointment card shows the doctor, date, time, mode, status, and the right actions.
+   - Reschedule: pick a new slot using the same slot picker, show the policy, confirm, and update the status to Rescheduled. Cancel: a kind confirmation step, ask for an optional reason, show any refund note, and update the status.
+   - Reminders: simulate reminders 24 hours and 1 hour before, in the notification center, email, and SMS, using discreet wording.
+   - "Add to calendar" (.ics) on every upcoming visit.
+   - "Share settings" button for each doctor visit to change what is shared with that doctor, at any time.
+
+   E. Waiting Room and online visit
+   - A Waiting Room page opens 10 minutes before the visit. It shows a countdown, a camera and microphone permission check (use the real browser permission prompt with friendly instructions if it is blocked), a test of the speaker and microphone level, and a "Check my internet" quick test (simulated).
+   - A "Join call" button becomes active at the right time. The call screen is simulated: a doctor video placeholder, a self-view, mute, camera on and off, audio-only switch, end call, and a "Having trouble?" help panel.
+   - Include a "Leave quietly" option and a note that the call is private and is not recorded.
+   - For in-person visits, show the address, directions button, and what to bring.
+
+   F. After the visit
+   - Mark the visit as Completed (through Demo Controls or the end-call button).
+   - Show a gentle "How did it go?" screen: a 1 to 5 rating, optional feedback, and "Report a problem".
+   - Show "Doctor's tips for you": simulated doctor-suggested goals that appear in Daily Goals under "From my doctor", plus an optional note from the doctor (mock).
+   - Show a "Book a follow-up" button that opens the booking flow with the same doctor.
+   - Consultation history with privacy controls: the user can see what was shared at each visit and can stop sharing or hide the visit from the history.
+
+   G. Consultation payment records
+   - If online payment is on, show consultation payments in Payment History with receipts. Show refund status for cancelled visits.
+
+8. My Medical Reports (FR-06): upload with drag and drop, file picker or phone camera. Check file type (PDF, JPG, PNG) and size, and show a progress bar. Ask for clear consent before the "AI help" step. Show simulated extracted values in an editable review screen ("Please check and fix anything that looks wrong"). Then show a plain-language explanation of each value, general food and lifestyle tips, and what kind of doctor to see. Show a "This is not medical advice" label on every result. Report history, share with a chosen psychiatrist (with a toggle that connects to the booking share settings), and permanent delete with a confirm step.
+
+9. Subscription and Payments (FR-08): current plan, renewal date, upgrade, downgrade, cancel, reactivate, grace period notice, payment history (subscription and consultation payments), and downloadable receipt or invoice (PDF). Checkout flow: choose plan, choose bKash, Nagad or Card, go to a simulated "secure payment gateway" page (a separate hosted-style screen) that returns success or fail. Never show or store card fields inside the main app.
+
+10. Notifications (FR-10): in-app notification center, and settings for email, SMS and browser alerts by category (goals, visits, subscription, rewards, announcements, motivation, account and security), quiet hours, and a daily limit. Show a preview of discreet notification text (for example "Your 5-minute check-in is ready"). Security alerts (new device login, password changed) are always on.
+
+11. My Profile (see User Management section D) and Settings: one place for account, privacy, security, notifications, and appearance. Include a clear "Privacy dashboard" view with consent switches, AI memory controls, a sharing list per doctor, "Export my data", and "Delete my account and data".
+
+12. Relapse Support page (FR-12): very gentle and kind. "A setback does not erase your progress." Show coping steps, a button to chat, a button to book a doctor (opens the booking flow with the earliest slots), an option to message a trusted person (uses the trusted contacts from the profile), and an optional "Let my psychiatrist know" toggle that needs consent. Show that progress history stays safe.
+
+13. Community (optional, FR-11): enable with a feature flag in a config file. Show groups, posts, replies, report and block buttons, rules about personal details, selling or sourcing drugs, and self-harm content, and a crisis help banner when risky words appear. Use the nickname only, never the real name.
+
+EMERGENCY AND CRISIS FLOW (FR-09) — treat this as the most important feature
+- Emergency Help page: verified-style list of national emergency numbers and helplines for Bangladesh (use clearly marked placeholder numbers I can replace, such as 999), hospitals and rehab centers in a searchable list with a location filter (mock data and a simple map placeholder).
+- One-tap "Call now" link on phones (tel: links) and a "Copy number" button on desktop.
+- Three risk levels shown as clear screens:
+  Low concern: kind message and coping tools.
+  Elevated: kind message, coping tools, and a quick button to talk to a professional (opens the earliest online slots).
+  Imminent risk: full-screen calm message, large "Call now" buttons, "Talk to a person now", an option to call a trusted contact from the profile, and a short safety step list.
+- Add a "Medical danger" warning card for alcohol and sleeping or anxiety pills: stopping suddenly can be dangerous, so please see a doctor first.
+- Crisis help is never behind login, payment, limits, a locked account, a paused account, or an unverified account. It also stays available during a call or booking, and Get Help Now must work from the Waiting Room and call screens.
+
+MOCK DATA AND DEMO MODE
+- Create realistic Bangladeshi context data (names, BDT prices, local payment names, phone formats).
+- Add a small "Demo Controls" drawer (hidden by default) to: switch between Guest, Free user and Premium user; load a ready demo account or start with a blank account; trigger a crisis test; simulate a dropped connection; simulate a login from a new device; simulate a locked account; fast-forward time for reminders and the 7-day deletion wait; reset all data; AND the simulated doctor-side actions: confirm or decline a booking, reschedule a slot, mark a visit as completed or missed, send a doctor note, and add doctor-suggested goals.
+- Include sample data files that match what other systems will supply later: /data/psychiatrists.json, /data/availability.json, /data/rewards.json, /data/articles.json, /data/emergency.json, /data/policies.json, /data/avatars.json. Keep each as clean JSON so a real API can replace them later.
+
+PRIVACY AND SAFETY RULES TO FOLLOW IN THE UI
+- No sensitive words in URLs, page titles, tab titles or analytics events (use neutral routes such as /me, /visits, /my-day, /library).
+- Logged-in pages must include a "noindex" tag. Public education pages must include good SEO tags and clean semantic HTML.
+- Clear all session data on logout and Quick Exit.
+- Never show a full email or phone number on screen without need (mask it like "01*****789" by default, with a "Show" button).
+- Show the disclaimer at registration, in the chat, in booking, and in report help.
+- The user controls what each doctor can see, and can change it at any time.
+- Collect only what is needed. Mark optional fields clearly.
+
+CODE QUALITY
+- Clean folder structure: /components, /pages, /data, /i18n, /hooks, /utils, /context (AuthContext, UserContext, LanguageContext, ThemeContext), /services (mock API layer: auth, user, doctors, slots, bookings, payments, so a real API can replace them later).
+- Reusable components (Button, Card, Modal, Toast, Tabs, Stepper, EmptyState, Skeleton, SlotPicker, DoctorCard, OtpInput, PasswordField, PasswordMeter, AvatarPicker, ProfileSection, ConsentSwitch).
+- Form validation with clear, kind messages on every form. Lazy-load pages and media. Optimize for slow networks.
+- Add short comments where a real backend or API would connect later.
+
+BUILD ORDER
+1. Design system, layout, header, footer, language switcher, Get Help Now, Quick Exit.
+2. Public pages.
+3. User management: sign-up wizard, OTP, log in, password reset, consent, onboarding, route protection, account menu.
+4. My Profile page with all sections, security, sessions, privacy, and account control (pause, export, delete).
+5. Dashboard, Daily Goals, Rewards, Progress.
+6. Library, relaxation tools, AI Chat.
+7. Psychiatrist system: directory, profile, booking wizard, My Appointments, Waiting Room and call screen, after-visit flow.
+8. Medical Reports, Subscription, Payments, Notifications, Relapse Support, Emergency pages, Community.
+9. Demo Controls (including the simulated doctor actions), polish, accessibility check, final test of every button and form.
+
+DONE WHEN
+- A new person can create an account, verify, set consent, finish or skip onboarding, and land on My Day.
+- The user can open My Profile, edit every section, change the password, manage devices, change what doctors can see, add a trusted contact, pause the account, export data, and start and cancel account deletion.
+- A user can log out and log in again and see all their saved data.
+- A user can find a doctor, book, pay or choose pay-at-visit, reschedule, cancel, join the waiting room, join the call, rate the visit, and book a follow-up, all without leaving the user portal.
+- There is no admin screen and no psychiatrist screen anywhere.
+- Every page works on phone, tablet and desktop, in both English and Bangla.
+- Get Help Now and Quick Exit work on every page.
+- The whole app uses simple, kind, easy words.
+- There are no dead buttons, no broken links, and no console errors.

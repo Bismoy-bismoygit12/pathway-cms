@@ -1,0 +1,6 @@
+{
+  "name": "Pathway",
+  "description": "A calm, safe, and professional recovery support companion with daily goals, psychiatrist booking, crisis support, and wellness tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

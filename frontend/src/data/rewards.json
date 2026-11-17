@@ -1,0 +1,67 @@
+[
+  {
+    "id": "badge-first-step",
+    "type": "badge",
+    "name": "First Step Anchor",
+    "nameBn": "প্রথম পদক্ষেপ ব্যাজ",
+    "pointsCost": 50,
+    "category": "Digital Badge",
+    "categoryBn": "ডিজিটাল ব্যাজ",
+    "description": "Awarded for completing your very first 3 mindful daily goals.",
+    "descriptionBn": "আপনার প্রথম ৩টি দৈনন্দিন লক্ষ্য সফলভাবে সম্পন্ন করার স্মারক।",
+    "icon": "Anchor",
+    "rarity": "Common"
+  },
+  {
+    "id": "badge-7-day-streak",
+    "type": "badge",
+    "name": "7-Day Calm Flame",
+    "nameBn": "৭ দিনের শান্ত শিখা",
+    "pointsCost": 150,
+    "category": "Digital Badge",
+    "categoryBn": "ডিজিটাল ব্যাজ",
+    "description": "A symbol of staying connected with yourself 7 days in a row.",
+    "descriptionBn": "টানা ৭ দিন নিজের যত্ন ও লক্ষ্যে অবিচল থাকার গৌরবময় প্রতীক।",
+    "icon": "Flame",
+    "rarity": "Rare"
+  },
+  {
+    "id": "perk-premium-chat",
+    "type": "perk",
+    "name": "14 Days Unlimited AI Support",
+    "nameBn": "১৪ দিনের আনলিমিটেড এআই সাপোর্ট",
+    "pointsCost": 250,
+    "category": "Digital Perk",
+    "categoryBn": "ডিজিটাল সুবিধা",
+    "description": "Remove the daily chat limit and access all deep relaxation guides.",
+    "descriptionBn": "প্রতিদিনের চ্যাট সীমা তুলে নিন এবং সমস্ত রিলাক্সেশন অডিও উপভোগ করুন।",
+    "icon": "Sparkles",
+    "rarity": "Popular"
+  },
+  {
+    "id": "voucher-telehealth-300",
+    "type": "voucher",
+    "name": "BDT 300 Telehealth Discount Voucher",
+    "nameBn": "৩০০ টাকা ডাক্তারের ভিজিট ছাড় ভাউচার",
+    "pointsCost": 400,
+    "category": "Consultation Voucher",
+    "categoryBn": "ডাক্তার ভিজিট ভাউচার",
+    "description": "Redeemable against any online or clinic visit with our verified psychiatrists.",
+    "descriptionBn": "যেকোনো বিশেষজ্ঞ ডাক্তারের অনলাইন বা চেম্বার ভিজিটে ৩০০ টাকা পর্যন্ত ছাড়।",
+    "icon": "Ticket",
+    "rarity": "Valuable"
+  },
+  {
+    "id": "perk-journal-pdf",
+    "type": "downloadable",
+    "name": "Printable Daily Reflection Journal",
+    "nameBn": "প্রিন্টযোগ্য দৈনিক আত্মপর্যালোচনা জার্নাল",
+    "pointsCost": 100,
+    "category": "Mindfulness Tool",
+    "categoryBn": "মাইন্ডফুলনেস টুল",
+    "description": "A beautiful 30-day gentle guided recovery reflection notebook (PDF).",
+    "descriptionBn": "সহজ ও সুন্দর ৩০ দিনের আত্মোন্নয়ন সহায়ক প্রিন্টযোগ্য পিডিএফ ডায়েরি।",
+    "icon": "BookOpen",
+    "rarity": "Common"
+  }
+]
